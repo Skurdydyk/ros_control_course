@@ -1,0 +1,32 @@
+publisher_joint_trajectory_controller:
+  ros__parameters:
+
+    controller_name: "position_trajectory_controller"
+    wait_sec_between_publish: 6
+
+    goal_names: ["pos1", "pos2", "pos3", "pos4"]
+    pos1: [1.57, -3.14, 1.57, -3.14, -1.57, 3.14, -1.57, 3.14]
+    pos2: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    pos3: [1.57, -3.14, 1.57, -3.14, -1.57, 3.14, -1.57, 3.14]
+    pos4: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+    joints:
+      - FL_HFE
+      - FL_KFE
+      - FR_HFE
+      - FR_KFE
+      - HL_HFE
+      - HL_KFE
+      - HR_HFE
+      - HR_KFE
+
+    check_starting_point: false
+    starting_point_limits:
+      FL_HFE: [-0.1,0.1]
+      FL_KFE: [-0.1,0.1]
+      FR_HFE: [-0.1,0.1]
+      FR_KFE: [-0.1,0.1]
+      HL_HFE: [-0.1,0.1]
+      HL_KFE: [-0.1,0.1]
+      HR_HFE: [-0.1,0.1]
+      HR_KFE: [-0.1,0.1]

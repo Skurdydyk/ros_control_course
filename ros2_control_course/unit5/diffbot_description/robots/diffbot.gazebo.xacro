@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:macro name="diffbot_gazebo" params="prefix">
+  <!-- Add the gazebo XML tags below this line -->
+
+
+
+  <!-- Add the gazebo XML tags above this line -->
+  </xacro:macro>
+
+</robot>

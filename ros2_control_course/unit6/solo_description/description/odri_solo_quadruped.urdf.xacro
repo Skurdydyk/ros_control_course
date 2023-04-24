@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!-- Quadruped robot  -->
+<!--
+Copied and modified from https://github.com/open-dynamic-robot-initiative/robot_properties_solo
+-->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="quadruped_robot">
+
+  <!-- Import solo macro -->
+  <xacro:include filename="$(find solo_description)/description/solo/solo_quadruped.urdf.xacro" />
+
+  <!-- Import solo ros2_control description -->
+  <xacro:include filename="$(find solo_description)/description/solo/solo_system_quadruped.ros2_control.xacro" />
+
+  <!-- Used for fixing robot -->
+  <link name="world"/>
+
+  <xacro:solo_quadruped parent="world" prefix="">
+    <origin xyz="0 0 0.35" rpy="0 0 0" />
+  </xacro:solo_quadruped>
+
+
+  <xacro:solo_system_quadruped name="SoloSystemQuadruped" />
+
+</robot>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!-- Basic differential drive mobile base -->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="diffbot">
+  <xacro:arg name="prefix" default="" />
+  <xacro:arg name="use_sim" default="true" />
+  
+
+  <xacro:include filename="$(find diffbot_description)/robots/diffbot_description.urdf.xacro" />
+
+  <!-- Import all Gazebo-customization elements, including Gazebo colors -->
+  <xacro:include filename="$(find diffbot_description)/robots/diffbot.gazebo.xacro"/>
+  <!-- Import Rviz colors -->
+  <xacro:include filename="$(find diffbot_description)/robots/materials.xacro"/>
+
+  <!-- Import diffbot ros2_control description -->
+  <xacro:include filename="$(find diffbot_description)/robots/diffbot.ros2_control.xacro" />
+
+  <xacro:diffbot prefix="$(arg prefix)" use_sim="$(arg use_sim)"/>
+  <xacro:diffbot_gazebo prefix="$(arg prefix)" />
+
+  <xacro:diffbot_ros2_control
+    name="diffbot" prefix="$(arg prefix)" use_sim="$(arg use_sim)" />
+    
+</robot>

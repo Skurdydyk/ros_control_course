@@ -1,0 +1,9 @@
+<library path="my_robot_hardware_interface">
+  <class name="ros2_control_demo_hardware/RRBotSystemPositionOnlyHardware"
+         type="ros2_control_demo_hardware::RRBotSystemPositionOnlyHardware"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>
+      ros2_control minimal hardware interface template
+    </description>
+  </class>
+</library>
